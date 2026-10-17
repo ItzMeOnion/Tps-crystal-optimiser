@@ -101,7 +101,7 @@ public final class PaperGameClient implements ClientModInitializer {
 
     /** Used by the rendering mixin. Custom-named stacks "1" through "9" render as configured items. */
     public static ItemStack disguiseForRendering(ItemStack original) {
-        if (original == null || original.isEmpty() || !original.hasCustomName()) return original;
+        if (original == null || original.isEmpty() || !original.getCustomName().isPresent()) return original;
         String name = original.getName().getString().trim();
         if (name.length() != 1 || name.charAt(0) < '1' || name.charAt(0) > '9') return original;
         Identifier id = Identifier.tryParse(ITEMS[name.charAt(0) - '1']);
