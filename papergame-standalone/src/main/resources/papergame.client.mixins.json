@@ -1,8 +1,0 @@
-{
-  "required": false,
-  "minVersion": "0.8",
-  "package": "com.papergame.mixin",
-  "compatibilityLevel": "JAVA_21",
-  "client": ["DrawContextItemMixin"],
-  "injectors": {"defaultRequire": 0}
-}
